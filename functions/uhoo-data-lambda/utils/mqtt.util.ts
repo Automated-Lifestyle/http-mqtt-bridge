@@ -30,9 +30,6 @@ export const publish = async (data: any) => {
   }
 
   console.info("[Mqtt] Publishing message...");
-  client.publish(
-    MQTT_TOPIC,
-    JSON.stringify({ name: "uhoo_temperature", value: data })
-  );
+  client.publish(MQTT_TOPIC, JSON.stringify(data));
   console.info("[Mqtt] Published message");
 };
